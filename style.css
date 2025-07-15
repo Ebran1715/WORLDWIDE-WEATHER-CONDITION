@@ -1,0 +1,87 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 420px;
+  margin: 50px auto;
+  padding: 30px 25px;
+  text-align: center;
+  background: linear-gradient(135deg, #e0f7fa, #b2dfdb);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 121, 107, 0.25);
+  color: #004d40;
+  
+}
+
+h1 {
+  color: #00695c;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+#weather {
+  margin-top: 25px;
+  font-size: 1.3em;
+  background: #ffffffdd; /* subtle white with opacity */
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 121, 107, 0.15);
+  transition: background-color 0.3s ease;
+}
+
+input, button {
+  width: 100%;
+  max-width: 320px;
+  padding: 12px 16px;
+  font-size: 1.1em;
+  margin-top: 20px;
+  border-radius: 8px;
+  border: 2px solid #00796b;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #004d40;
+  box-shadow: 0 0 8px #004d40aa;
+  background-color: #f0fdfa;
+}
+
+button {
+  background: linear-gradient(135deg, #00796b, #004d40);
+  color:white;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 121, 107, 0.4);
+  user-select: none;
+}
+
+button:hover, button:focus {
+  background: linear-gradient(135deg, #004d40, #00332e);
+  box-shadow: 0 7px 20px rgba(0, 77, 64, 0.6);
+  outline: none;
+  transform: translateY(-2px);
+  transition: all 0.25s ease;
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 10px rgba(0, 77, 64, 0.4);
+}
+
+@media (max-width: 480px) {
+  body {
+    margin: 30px 15px;
+    padding: 25px 15px;
+  }
+
+  input, button {
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
