@@ -9,7 +9,7 @@ async function getWeather() {
     return;
   }
 
-  weatherDiv.textContent = 'Please wait for a sec';
+  weatherDiv.textContent = 'Just a moment, please.';
 
   try {
     const response = await fetch(`https://wttr.in/${location}?format=j1`);
