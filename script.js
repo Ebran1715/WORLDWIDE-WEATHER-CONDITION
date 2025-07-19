@@ -1,3 +1,4 @@
+
 document.getElementById('getWeatherBtn').addEventListener('click', getWeather);
 
 async function getWeather() {
@@ -9,7 +10,7 @@ async function getWeather() {
     return;
   }
 
-  weatherDiv.textContent = 'Just a moment, please.';
+  weatherDiv.textContent = 'Please wait for a moment';
 
   try {
     const response = await fetch(`https://wttr.in/${location}?format=j1`);
@@ -35,3 +36,9 @@ async function getWeather() {
     console.error(error);
   }
 }
+
+
+
+
+
+  
