@@ -1,99 +1,141 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  max-width: 420px;
-  margin: 50px auto;
-  padding: 30px 25px;
-  text-align: center;
-  background: linear-gradient(135deg, #d0f4f4, #a7e4e0);
-  border-radius: 16px;
-  box-shadow: 0 12px 30px rgba(0, 121, 107, 0.3);
-  color: #00332e;
-  transition: all 0.3s ease;
-}
-
-h1 {
-  color: red;
-  font-weight: 800;
-  font-size: 2.7rem;
-  margin-bottom: 25px;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-#weather {
-  margin-top: 25px;
-  font-size: 1.4em;
-  background: rgba(255, 255, 255, 0.9);
-  padding: 20px 25px;
-  border-radius: 14px;
-  box-shadow: 0 6px 20px rgba(0, 121, 107, 0.2);
-  transition: background-color 0.4s ease, transform 0.2s ease;
-}
-
-#weather:hover {
-  transform: translateY(-4px);
-}
-
-input,
-button {
-  width: 100%;
-  max-width: 320px;
-  padding: 14px 18px;
-  font-size: 1.1em;
-  margin-top: 20px;
-  border-radius: 10px;
-  border: 2px solid #00796b;
-  box-sizing: border-box;
-  transition: all 0.3s ease;
-}
-
-input {
-  background: #f9fdfa;
-  color: #00332e;
-}
-
-input:focus {
-  outline: none;
-  border-color: #004d40;
-  box-shadow: 0 0 10px rgba(0, 77, 64, 0.3);
-  background-color: #e0fdf7;
-}
-
-button {
-  background: linear-gradient(135deg, #009688, #004d40);
-  color: white;
-  font-weight: 700;
-  cursor: pointer;
-  border: none;
-  box-shadow: 0 6px 18px rgba(0, 121, 107, 0.5);
-  user-select: none;
-  transition: all 0.3s ease;
-}
-
-button:hover,
-button:focus {
-  background: linear-gradient(135deg, #00695c, #003c33);
-  box-shadow: 0 10px 25px rgba(0, 77, 64, 0.5);
-  outline: none;
-  transform: translateY(-3px);
-}
-
-button:active {
-  transform: translateY(0);
-  box-shadow: 0 4px 10px rgba(0, 77, 64, 0.4);
-}
-
-@media (max-width: 480px) {
-  body {
-    margin: 30px 15px;
-    padding: 25px 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 420px;
+    margin: 50px auto;
+    padding: 30px 25px;
+    text-align: center;
+    background-color: #121212;
+    border: 2px solid #00bfa5;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0, 255, 229, 0.15);
+    color: #e0f2f1;
+    transition: all 0.3s ease;
   }
-
+  
+  h1 {
+    color: #00e676;
+    font-weight: 800;
+    font-size: 2.7rem;
+    margin-bottom: 25px;
+    text-shadow: 0 2px 5px rgba(0, 255, 204, 0.2);
+  }
+  
+  #weather {
+    margin-top: 25px;
+    font-size: 1.4em;
+    background: rgba(0, 150, 136, 0.1);
+    padding: 20px 25px;
+    border-radius: 14px;
+    border: 1px solid #00bfa5;
+    box-shadow: 0 6px 20px rgba(0, 255, 204, 0.1);
+    transition: background-color 0.4s ease, transform 0.2s ease;
+  }
+  
+  #weather:hover {
+    transform: translateY(-4px);
+  }
+  
   input,
   button {
-    max-width: 100%;
+    width: 100%;
+    max-width: 320px;
+    padding: 14px 18px;
+    font-size: 1.1em;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
   }
+  
+  input {
+    background: #1e1e1e;
+    color: #ffffff;
+    border: 2px solid #00bfa5;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #00e5ff;
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
+    background-color: #2b2b2b;
+  }
+  
+  button {
+    background: linear-gradient(135deg, #00bfa5, #00695c);
+    color: #ffffff;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 6px 18px rgba(0, 255, 204, 0.3);
+    user-select: none;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover,
+  button:focus {
+    background: linear-gradient(135deg, #00e676, #00bfa5);
+    box-shadow: 0 10px 25px rgba(0, 255, 229, 0.4);
+    outline: none;
+    transform: translateY(-3px);
+  }
+  
+  button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(0, 255, 229, 0.3);
+  }
+.scrolling-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  background-color: #000;
+  color: #00e5ff;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding-left: 10px; /* small padding */
+  z-index: 9999;
+}
 
-  h1 {
-    font-size: 2.2rem;
+/* Animate the span inside, from left to right */
+.scrolling-banner span {
+  display: inline-block;
+  position: relative;
+  animation: slide-left-right 10s ease-in-out infinite alternate;
+}
+
+/* The keyframes move text left to right without going off-screen */
+@keyframes slide-left-right {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: calc(100% - 100vw); /* Move right but still visible */
   }
 }
+
+/* Push body content down so it doesn't hide behind fixed banner */
+body {
+  padding-top: 40px;
+}
+
+  
+  @media (max-width: 480px) {
+    body {
+      margin: 30px 15px;
+      padding: 25px 15px;
+    }
+  
+    input,
+    button {
+      max-width: 100%;
+    }
+  
+    h1 {
+      font-size: 2.2rem;
+    }
+  }
+  
