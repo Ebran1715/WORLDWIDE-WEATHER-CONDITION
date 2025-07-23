@@ -12,38 +12,43 @@
 /* App Container */
 .app-container {
   background: rgba(0, 0, 0, 0.6);
-  padding: 30px;
+  padding: 60px 30px 30px;
   border-radius: 20px;
+  width: 90%;
   max-width: 420px;
   margin: 80px auto;
   color: #e0f2f1;
   text-align: center;
   box-shadow: 0 12px 30px rgba(0, 255, 229, 0.15);
   border: 2px solid #00bfa5;
+  box-sizing: border-box;
 }
 
 /* Heading */
 h1 {
-  color:white;
+  color: white;
   font-weight: 800;
-  font-size: 1.4rem;
+  font-size: clamp(1.2rem, 5vw, 1.2rem); /* responsive font */
   margin-bottom: 25px;
   text-shadow: 0 2px 5px rgba(0, 255, 204, 0.2);
+  white-space: normal;
 }
+
 h1 {
   white-space: nowrap;
 }
 
-
 /* Weather Info */
 #weather {
   margin-top: 25px;
-  font-size: 1.4em;
+  font-size: clamp(1rem, 3.5vw, 1.4rem); /* responsive font */
   background: rgba(0, 150, 136, 0.2);
   padding: 20px 25px;
   border-radius: 14px;
   border: 1px solid #00bfa5;
   box-shadow: 0 6px 20px rgba(0, 255, 204, 0.1);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Input & Button */
@@ -52,7 +57,7 @@ button {
   width: 100%;
   max-width: 320px;
   padding: 14px 18px;
-  font-size: 1.1em;
+  font-size: clamp(1rem, 3vw, 1.1rem);
   margin-top: 20px;
   border-radius: 10px;
   box-sizing: border-box;
@@ -107,12 +112,13 @@ button:active {
   overflow: hidden;
   box-sizing: border-box;
   z-index: 9999;
+  font-size: clamp(0.8rem, 2vw, 1rem); /* responsive font */
 }
 
 .scrolling-banner span {
   display: inline-block;
   position: absolute;
-  left: 0; /* Start from the left */
+  left: 0;
   animation: scroll-left-to-right 30s linear infinite;
   white-space: nowrap;
 }
@@ -126,21 +132,22 @@ button:active {
   }
 }
 
-
-
-/* Responsive */
-@media (max-width: 480px) {
+/* Responsive Tweaks */
+@media (max-width: 768px) {
   .app-container {
-    margin: 30px 15px;
-    padding: 25px 15px;
+    margin: 50px auto;
+    padding: 50px 15px 25px;
   }
 
   input,
   button {
     max-width: 100%;
+    padding: 12px;
   }
 
-  h1 {
-    font-size: 2.2rem;
+  .scrolling-banner {
+    height: 35px;
+    line-height: 35px;
+    font-size: 0.85rem;
   }
 }
