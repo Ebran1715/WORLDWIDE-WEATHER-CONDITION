@@ -28,7 +28,7 @@
 h1 {
   color: white;
   font-weight: 800;
-  font-size: clamp(1.2rem, 5vw, 1.2rem); /* responsive font */
+  font-size: clamp(1.2rem, 2vw, 1.2rem); /* responsive font */
   margin-bottom: 25px;
   text-shadow: 0 2px 5px rgba(0, 255, 204, 0.2);
   white-space: normal;
