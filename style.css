@@ -15,7 +15,7 @@
   padding: 60px 30px 30px;
   border-radius: 20px;
   width: 90%;
-  max-width: 420px;
+  max-width: 700px;
   margin: 80px auto;
   color: #e0f2f1;
   text-align: center;
@@ -28,20 +28,16 @@
 h1 {
   color: white;
   font-weight: 800;
-  font-size: clamp(1.2rem, 5vw, 1.2rem); /* responsive font */
+  font-size: clamp(1.2rem, 5vw, 2rem); /* Better scale */
   margin-bottom: 25px;
   text-shadow: 0 2px 5px rgba(0, 255, 204, 0.2);
-  white-space: normal;
-}
-
-h1 {
   white-space: nowrap;
 }
 
 /* Weather Info */
 #weather {
   margin-top: 25px;
-  font-size: clamp(1rem, 3.5vw, 1.4rem); /* responsive font */
+  font-size: clamp(1rem, 3.5vw, 1.4rem);
   background: rgba(0, 150, 136, 0.2);
   padding: 20px 25px;
   border-radius: 14px;
@@ -112,7 +108,7 @@ button:active {
   overflow: hidden;
   box-sizing: border-box;
   z-index: 9999;
-  font-size: clamp(0.8rem, 2vw, 1rem); /* responsive font */
+  font-size: clamp(0.8rem, 2vw, 1rem);
 }
 
 .scrolling-banner span {
@@ -149,5 +145,56 @@ button:active {
     height: 35px;
     line-height: 35px;
     font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-container {
+    padding: 40px 12px 20px;
+    margin: 40px auto;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+    white-space: normal;
+  }
+
+  #weather {
+    padding: 16px 20px;
+    font-size: 1rem;
+  }
+
+  input,
+  button {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+
+  .scrolling-banner {
+    height: 30px;
+    line-height: 30px;
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .app-container {
+    padding: 80px 40px 40px;
+    max-width: 724px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  #weather {
+    font-size: 1.6rem;
+    padding: 24px 30px;
+  }
+
+  input,
+  button {
+    font-size: 1.2rem;
+    max-width: 360px;
   }
 }
