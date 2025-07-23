@@ -8,18 +8,23 @@
 </head>
 <body>
 
-  <h1>Nepal Weather App</h1>
+  <!-- Background Video -->
+  <video autoplay muted loop id="bgVideo">
+    <source src="https://videos.pexels.com/video-files/5863716/5863716-uhd_2560_1440_24fps.mp4">
+    Your browser does not support the video tag.
+  </video>
 
-  <input type="text" id="location" placeholder="Enter city Name" />
-  <br />
-  <button id="getWeatherBtn">Find out the weather</button>
-
-  <div id="weather"></div>
-  <div class="scrolling-banner">
-    <span>🌤️ Live Weather Updates — Stay Informed! 🌡️</span>
+  <!-- Weather App Container -->
+  <div class="app-container">
+    <h1>WORLDWIDE WEATHER CONDITIONS</h1>
+    <input type="text" id="location" placeholder="Enter city Name" />
+    <br />
+    <button id="getWeatherBtn">Find out the weather</button>
+    <div id="weather"></div>
+    <div class="scrolling-banner">
+      <span>🌤️ Live Weather Updates — Stay Informed! 🌡️</span>
+    </div>
   </div>
-  
-
 
   <script src="script.js"></script>
 </body>
