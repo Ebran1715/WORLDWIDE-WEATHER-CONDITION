@@ -82,3 +82,5 @@ document.querySelectorAll('.footer-links a').forEach(link => {
     pageContent.innerHTML = footerPages[id] || "<p>Content not available.</p>";
   });
 });
+
+
