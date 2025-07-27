@@ -1,3 +1,4 @@
+
 // Weather App logic
 document.getElementById('getWeatherBtn').addEventListener('click', getWeather);
 
@@ -59,7 +60,7 @@ const pages = {
   contact: "<h2>Contact Us</h2><p>If you have questions or feedback, reach out to us at support@weathernow.com.</p>"
 };
 
-document.querySelectorAll('.navbar-links a').forEach(link => {
+document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', e => {
     e.preventDefault();
     const page = link.getAttribute('data-page');
@@ -80,6 +81,14 @@ document.querySelectorAll('.footer-links a').forEach(link => {
     e.preventDefault();
     const id = link.id.replace('footer-', '');
     pageContent.innerHTML = footerPages[id] || "<p>Content not available.</p>";
+  });
+});
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
   });
 });
 
