@@ -9,7 +9,7 @@
 <body>
 
   <!-- Navigation Bar -->
-  <nav class="navbar">
+  <!-- <nav class="navbar">
     <div class="navbar-brand">🌍 WeatherNow</div>
     <ul class="navbar-links">
       <li><a href="#" data-page="home">Home</a></li>
@@ -17,8 +17,31 @@
       <li><a href="#" data-page="favorites">Favorites</a></li>
       <li><a href="#" data-page="about">About</a></li>
       <li><a href="#" data-page="contact">Contact</a></li>
-    </ul>
-  </nav>
+    </ul> -->
+    <nav class="navbar">
+      <div class="navbar-brand">🌍 WeatherNow</div>
+      <!-- Navigation links (desktop and toggled mobile) -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#" data-page="home">Home</a></li>
+        <li><a href="#" data-page="forecast">Forecast</a></li>
+        <li><a href="#" data-page="favorites">Favorites</a></li>
+        <li><a href="#" data-page="about">About</a></li>
+        <li><a href="#" data-page="contact">Contact</a></li>
+      </ul>
+      
+  
+      <!-- Hamburger icon (only on mobile) on the right -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <div class="scrolling-banner">
+      <span>🌤️ Live Weather Updates — Stay Informed! 🌡️</span>
+    </div>
+
 
   <!-- Background Video -->
   <video autoplay muted loop id="bgVideo">
@@ -37,9 +60,9 @@
  <!-- Content area for navbar click texts -->
     <div id="pageContent" style="margin-top: 30px; color: #e0f2f1; font-size: 1.1rem; text-align:center;"></div>
 
-    <div class="scrolling-banner">
+    <!-- <div class="scrolling-banner">
       <span>🌤️ Live Weather Updates — Stay Informed! 🌡️</span>
-    </div>
+    </div> -->
   </div>
 
   <foss="footer">
@@ -61,16 +84,16 @@
 
       <div class="footer-contact">
         <h3>Contact Us</h3>
-        <p>Email: ebranhusain777@gmail.com</p><br>
-        <p>Phone: +9779824479744</p>
-        <br><br>
+        <p>Email:ebranhusain777@gmail.com</p>
+        <p>Phone:+9779824479744</p>
+        <br>
       
         <div class="social-icons">
           <!-- Facebook Icon - Opens Facebook login -->
           <a href="https://www.facebook.com/login" target="_blank" title="Login with Facebook">
             <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" width="32" height="32">
           </a>
-        <br><br>
+        <br>
           <!-- Instagram Icon - Opens Instagram login -->
           <a href="https://www.instagram.com/accounts/login/" target="_blank" title="Login with Instagram">
             <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="32" height="32">
@@ -87,3 +110,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
