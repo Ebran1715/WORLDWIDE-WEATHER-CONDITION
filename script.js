@@ -93,10 +93,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Scroll to the weather app container when "WeatherNow" is clicked
-document.getElementById('nav-brand')?.addEventListener('click', e => {
-  e.preventDefault();
-  document.getElementById('weatherApp')?.scrollIntoView({ behavior: 'smooth' });
-});
+// document.getElementById('nav-brand')?.addEventListener('click', e => {
+//   e.preventDefault();
+//   document.getElementById('weatherApp')?.scrollIntoView({ behavior: 'smooth' });
+// });
 
 document.getElementById('footer-brand')?.addEventListener('click', e => {
   e.preventDefault();
@@ -105,4 +105,28 @@ document.getElementById('footer-brand')?.addEventListener('click', e => {
 let lastScrollTop = 0;
 const banner = document.querySelector('.scrolling-banner');
 const navbarHeight = 60;  // px
+// Attach click handler to all nav links
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    const pageKey = this.dataset.page; // Get data-page="home" etc.
+
+    // Rotate animation
+    pageContent.classList.remove('animate-rotate');
+    void pageContent.offsetWidth; // trigger reflow to restart animation
+    pageContent.classList.add('animate-rotate');
+
+    // Update content after short delay
+    setTimeout(() => {
+      pageContent.innerHTML = contentMap[pageKey] || `<p>Content not found.</p>`;
+    }, 300); // Halfway through animation
+  });
+});
+
+
+
+
+
+
 
