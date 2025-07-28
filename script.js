@@ -93,10 +93,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Scroll to the weather app container when "WeatherNow" is clicked
-// document.getElementById('nav-brand')?.addEventListener('click', e => {
-//   e.preventDefault();
-//   document.getElementById('weatherApp')?.scrollIntoView({ behavior: 'smooth' });
-// });
+document.getElementById('nav-brand')?.addEventListener('click', e => {
+  e.preventDefault();
+  document.getElementById('weatherApp')?.scrollIntoView({ behavior: 'smooth' });
+});
 
 document.getElementById('footer-brand')?.addEventListener('click', e => {
   e.preventDefault();
