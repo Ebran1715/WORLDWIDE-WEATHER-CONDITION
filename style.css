@@ -285,7 +285,7 @@ button:active {
   .nav-links {
     display: none;
     position: absolute;
-    top: 52px;
+    top: 100px;
     right: 0;
     width: 100%;
     flex-direction: column;
