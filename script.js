@@ -1,4 +1,3 @@
-
 // Weather App logic
 document.getElementById('getWeatherBtn').addEventListener('click', getWeather);
 
@@ -48,25 +47,24 @@ async function getWeather() {
     console.error(error);
   }
 }
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
 
-// Navbar link click handling
-const pageContent = document.getElementById('pageContent');
 
-const pages = {
-  home: "<h2>Welcome Home!</h2><p>This is the main page of WeatherNow where you can search for weather updates worldwide.</p>",
-  forecast: "<h2>Forecast</h2><p>Check the upcoming weather forecasts for your favorite cities here.</p>",
-  favorites: "<h2>Favorites</h2><p>Manage and view your favorite locations for quick weather info.</p>",
-  about: "<h2>About WeatherNow</h2><p>WeatherNow is your go-to source for reliable and up-to-date weather information globally.</p>",
-  contact: "<h2>Contact Us</h2><p>If you have questions or feedback, reach out to us at support@weathernow.com.</p>"
-};
+    hamburger.addEventListener('click', () => {
 
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    const page = link.getAttribute('data-page');
-    pageContent.innerHTML = pages[page] || "<p>Content not available.</p>";
-  });
+      navLinks.classList.toggle('active');
+      
+    });
+  
+
 });
+
+
+
+
+
 // Footer links click handling
 const footerPages = {
   home: pages.home,
@@ -83,20 +81,8 @@ document.querySelectorAll('.footer-links a').forEach(link => {
     pageContent.innerHTML = footerPages[id] || "<p>Content not available.</p>";
   });
 });
-document.addEventListener('DOMContentLoaded', () => {
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('navLinks');
 
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-  });
-});
 
-// Scroll to the weather app container when "WeatherNow" is clicked
-// document.getElementById('nav-brand')?.addEventListener('click', e => {
-//   e.preventDefault();
-//   document.getElementById('weatherApp')?.scrollIntoView({ behavior: 'smooth' });
-// });
 
 document.getElementById('footer-brand')?.addEventListener('click', e => {
   e.preventDefault();
@@ -123,10 +109,4 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     }, 300); // Halfway through animation
   });
 });
-
-
-
-
-
-
 
