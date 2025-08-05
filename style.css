@@ -73,8 +73,8 @@ html, body {
   background: rgba(0, 0, 0, 0.6);
   padding: 60px 30px 30px;
   border-radius: 20px;
-  width: 90%;
-  max-width: 700px;
+  width: 100%;
+  max-width: none;
   margin: 150px auto 50px;
   color: #e0f2f1;
   text-align: center;
@@ -123,6 +123,7 @@ input {
   background: #1e1e1e;
   color: #ffffff;
   border: 2px solid #00bfa5;
+
 }
 
 input:focus {
@@ -218,7 +219,7 @@ button:active {
 @media (min-width: 1200px) {
   .app-container {
     padding: 80px 40px 40px;
-    max-width: 724px;
+    max-width: 724px; 
   }
 
   h1 {
@@ -589,9 +590,5 @@ footer {
   animation: rotateAndFade 3s ease-in-out;
   display: inline-block;
 }
-
-
-
-
 
 
