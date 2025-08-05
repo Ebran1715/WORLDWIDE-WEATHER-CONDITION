@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Forecast - WeatherNow</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="ebran.css" />
 </head>
 <body>
     <nav class="navbar">
@@ -31,7 +31,13 @@
       <li>Humidity and wind speed predictions</li>
       <li>Feels-like temperature and more</li>
     </ul>
+    <input type="text" id="location" placeholder="Enter city name" /><br>
+  <button id="getWeatherBtn">Get Weather</button>
+  <div id="weather"></div>
+  
   </div>
+  
+
   <footer>
     <div class="footer-container">
       <div class="footer-brand">
@@ -78,7 +84,7 @@
     </div>
   </footer>
 
-  <script src="script.js">
+  <script src="forecast.js">
     
   </script>
 </body>
